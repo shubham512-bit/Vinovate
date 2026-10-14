@@ -1,8 +1,8 @@
 {
-  "name": "tiltplay-motion-controller",
+  "name": "walle-eve-signal-mission-control",
   "version": "1.0.0",
   "private": true,
-  "description": "Turn a phone into a motion controller for a browser game.",
+  "description": "An autonomous search-and-rescue simulation for WALL-E and EVE.",
   "scripts": { "start": "node server.js" }
 }
 
