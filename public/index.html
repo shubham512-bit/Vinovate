@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#11141b"><title>TiltPlay — play with your phone</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar"><a class="brand" href="/"><span class="brand-mark">T</span><span>TILT<span class="brand-light">PLAY</span></span></a><div class="header-right"><span class="live-dot"></span><span id="topStatus">READY TO PAIR</span><button class="icon-button" id="soundToggle" aria-label="Toggle sound">♪</button></div></header>
+    <section id="hostView" class="host-view">
+      <div class="intro"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR PHONE IS THE CONTROLLER</div><h1>Less button mashing.<br><span>More body language.</span></h1><p>Pair your phone. Tilt to steer. Try not to crash.</p></div>
+      <section class="game-card">
+        <div class="game-head"><div><span class="section-label">01 / THE GAME</span><h2>Neon Drift</h2></div><div class="score"><span>SCORE</span><strong id="score">000000</strong></div></div>
+        <div class="game-wrap"><canvas id="game" aria-label="Neon Drift game"></canvas><div class="game-overlay" id="gameOverlay"><div class="overlay-icon">↗</div><h3>Ready when you are</h3><p>Connect a phone to start the race</p></div><div class="game-hud"><span id="speedReadout">000 KM/H</span><span id="lapReadout">LAP 01 / ∞</span></div></div>
+        <div class="game-foot"><span><i class="key">TILT</i> STEER</span><span><i class="key">SHAKE</i> BOOST</span><span><i class="key">TAP</i> BRAKE</span></div>
+      </section>
+      <aside class="pair-card"><div class="pair-copy"><span class="section-label">02 / CONNECT YOUR PHONE</span><h2>Same room.<br><span>New controller.</span></h2><p>Open this link on your phone and enter the room code. Keep both devices on the same Wi-Fi.</p><div class="room-code"><span id="roomCode">------</span><button id="copyCode" aria-label="Copy room code">▢</button></div><div class="pair-link" id="pairLink">Waiting for local address…</div><div class="connection-state"><span class="status-led" id="statusLed"></span><span id="connectionText">Waiting for a phone</span><span class="latency" id="latency">— ms</span></div></div><div class="pair-art"><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="phone-illustration"><div class="phone-screen"><span class="phone-notch"></span><div class="phone-orbit">⌁</div><span class="phone-label">TILT<br>TO PLAY</span></div></div><div class="art-cross">+</div><div class="art-dot"></div></div></aside>
+      <footer class="host-footer"><span>BUILT FOR THE FEELING OF <b>ONE MORE ROUND</b></span><span>LOW LATENCY · NO APP STORE · JUST PLAY</span></footer>
+    </section>
+    <section id="controllerView" class="controller-view hidden">
+      <div class="controller-top"><a class="brand" href="/"><span class="brand-mark">T</span><span>TILT<span class="brand-light">PLAY</span></span></a><span class="phone-status"><i class="status-led" id="phoneLed"></i><span id="phoneStatus">NOT CONNECTED</span></span></div>
+      <div id="joinPanel" class="join-panel"><span class="section-label">YOUR PHONE IS THE CONTROLLER</span><h1>Ready to<br><span>make a little noise?</span></h1><p>Enter the room code shown on your laptop.</p><form id="joinForm"><input id="roomInput" inputmode="text" maxlength="6" autocomplete="off" placeholder="ABC123" aria-label="Room code"><button type="submit">CONNECT <span>↗</span></button></form><div class="secure-note"><span>⌁</span> Both devices should be on the same Wi-Fi</div></div>
+      <div id="padPanel" class="pad-panel hidden"><div class="pad-head"><span class="section-label">ROOM <b id="phoneRoom">------</b></span><button id="recalibrate" class="small-link">RECALIBRATE ↻</button></div><div class="tilt-zone" id="tiltZone"><div class="tilt-grid"></div><div class="tilt-ring"><div class="tilt-ball" id="tiltBall"></div></div><div class="tilt-label">TILT TO STEER</div><span class="axis axis-x">← LEFT <span>RIGHT →</span></span></div><button class="boost-button" id="boostButton"><span class="bolt">↯</span><span>SHAKE OR HOLD TO BOOST</span><span class="boost-meter"><i id="boostMeter"></i></span></button><div class="pad-actions"><button class="action-button brake" id="brakeButton"><span>↓</span><b>BRAKE</b><small>TAP TO SLOW</small></button><button class="action-button jump" id="jumpButton"><span>↑</span><b>HOP</b><small>TAP TO JUMP</small></button></div><p class="sensor-note" id="sensorNote">Move your phone gently to steer</p></div>
+      <div class="phone-bottom"><span>MOVE A LITTLE. <b>GO A LONG WAY.</b></span><span id="phoneLatency">— ms</span></div>
+    </section>
+  </main><script src="app.js"></script>
+</body></html>
+
