@@ -1,0 +1,18 @@
+{
+  "mission": "Quiet Garden",
+  "outcome": "EVE found · return to base recommended",
+  "evidence": ["Rusted compass", "Glass petal", "Silver thread", "Visual contact"],
+  "inferredLocation": { "x": 10, "y": 1 },
+  "confidence": 0.94,
+  "batteryRemaining": 28,
+  "actions": 46,
+  "sampleTrace": [
+    { "step": 1, "action": "scan", "observation": "Signal 024° · strength 0.18", "reason": "A faint bearing is present; one scan can reduce uncertainty before leaving base." },
+    { "step": 2, "action": "move", "observation": "Clear ground · nearby cells mapped", "reason": "Move one safe step toward the strongest signal sector." },
+    { "step": 11, "action": "scan", "observation": "Rusted compass found · signal 041° · strength 0.62", "reason": "A clue is within sensor range. Record its location and update the bearing estimate." },
+    { "step": 29, "action": "scan", "observation": "Visual contact · EVE at X10 Y01", "reason": "The signal is close and all fragments align. Confirm with a short-range scan." },
+    { "step": 46, "action": "return", "observation": "Base reached · battery 28%", "reason": "EVE is located. Preserve the evidence and return along the known safe route." }
+  ],
+  "note": "Illustrative sample. Exact traces vary with sensor noise and mission decisions."
+}
+
